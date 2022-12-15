@@ -24,7 +24,7 @@ android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "com.example.android.devbyteviewer"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -72,7 +72,7 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
 
     // coroutines for getting off the UI thread
-    def coroutines = "1.0.1"
+    def coroutines = "1.2.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
@@ -96,16 +96,16 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
-    // Room dependency
-    def room_version = "2.1.0-alpha06"
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-
     // logging
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
     // glide for images
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.7.1'
+
+    // Room dependency
+    def room_version = "2.2.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
 }
